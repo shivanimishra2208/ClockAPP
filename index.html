@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script >   
+    let b
+    let date
+    let time
+        setInterval(() => {
+         b =new Date
+         time = b.getHours() + ":"+ b.getMinutes()+ ":" +b.getSeconds();
+         date =b.toLocaleDateString()
+        document.getElementById("time").innerHTML = time  +" " +  "on" +  " " + date   ; 
+     } , 1000);
+        </script>
+</head>
+<style>
+    .box{ 
+        border :1px;
+        width: auto;
+        height: fit-content;
+        background-color: darkslategray;
+        text-decoration: aliceblue;
+    }
+    .modify{
+        border: 1px;
+        width: 800px;;
+        height: 90px;
+        margin-left: 250px;
+        padding: auto;
+        background-color: antiquewhite;
+        border-radius: 50px;
+        text-align: center;
+        padding-top: 2px;
+        
+    }
+</style>
+<body>
+    <div class= "box" >
+    <h1 align="center">
+        <font face=aria color= "white" size="8">Clock</font>
+    </h1> 
+    </div>
+</div >
+<p align="center"  class ="modify" style="text-decoration: dotted">
+    <font face="Lato" color=black size="10" >This page shows you the time </font></p>
+    <h4 align="center" class="modify " >
+        <font face="aria", color="black" size="6">Current Time is:<span id = "time"> </span> </font>
+    </h4>
+     
+</div>
+<div class="box2">
+    <p align="center" >
+        <button onclick="location.href='https://24timezones.com/'" type="button" > Browse Other zones </button>
+        
+    </p>
+</div>
+</body>
+
+</html>
